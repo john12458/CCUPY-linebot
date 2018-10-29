@@ -38,7 +38,7 @@ import random
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-        db=["吃大便","我家","炒飯"]
+        db=["吃大","我00","00飯"]
         dinner = random.choice(db)
         messages=[]
         messages.append(TextSendMessage(text="哈"*10))
