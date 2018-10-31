@@ -38,17 +38,17 @@ import random
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-        db=["吃大便","我家","炒飯""]
-        dinner = random.choice(db)
-        messages=[]
-        messages.append(TextSendMessage(text="哈"*10))
-      
-        if(event.message.text=="吃什麼?"):
-            messages.append(TextSendMessage(text=dinner))
-        line_bot_api.reply_message(
-            event.reply_token,
-            messages
-        )
+    db=["吃大便","我家","炒飯""]
+    dinner = random.choice(db)
+    messages=[]
+    messages.append(TextSendMessage(text="哈"*10))
+    
+    if(event.message.text=="吃什麼?"):
+        messages.append(TextSendMessage(text=dinner))
+    line_bot_api.reply_message(
+        event.reply_token,
+        messages
+    )
       
 #########################################################
 
